@@ -25,7 +25,7 @@ fun main() {
         biggest=number3
 
     }
-    
+
     var mid = 0
     if ((number1 < number2 && number1 > number3 || number1 > number2 && number1 < number3))
     mid = number1
@@ -36,6 +36,17 @@ fun main() {
     if ((number3 < number1 && number3 > number2 || number3 > number1 && number3 < number2))
         mid = number3
 
+    /*if (number1 < biggest && number1 > smallest ){
+        mid= number1
+    }
+    if(number2 < biggest && number2 > smallest) {
+        mid = number2
+    }
+    else {
+        mid = number3
+
+    }
+*/
     println("$smallest $mid $biggest")
 
 }
