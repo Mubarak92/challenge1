@@ -45,9 +45,6 @@ fun getmidEasy(number1:Double,number2:Double,number3:Double):Double{
 }
 fun getmid(number1: Double,number2: Double,number3: Double): Double {
 
-    var smallest=getsmallest(number1, number2, number3)
-    var biggest=getbiggest(number1, number2, number3)
-
     var mid = 0.0
     if ((number1 < number2 && number1 > number3 || number1 > number2 && number1 < number3))
         mid = number1
