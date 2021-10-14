@@ -1,30 +1,39 @@
 
-fun sort (number1:Double, number2:Double, number3:Double){
+fun sort (number1:Double, number2:Double, number3:Double, sort1:Boolean= true){
     val smallest = getsmallest(number1,number2,number3)
     val biggest = getbiggest(number1,number2,number3)
+    val midEasy = getmidEasy(number1,number2,number3)
     val mid = getmid(number1,number2,number3)
 
-    println("$smallest $mid $biggest")
+    if (sort1  ){
+        println("$smallest $midEasy $biggest")
+        println ("mid from easy")
+    }else{
+        println("$smallest $mid $biggest")
+        println ("mid from normal")
+    }
 }
 
 fun main() {
-
 
     println("Enter numbers")
     val number1 = readLine()!!.toDouble()
     val number2 = readLine()!!.toDouble()
     val number3 = readLine()!!.toDouble()
+    val sort1 = readLine()!!.toBoolean()
+
+    sort(number1,number2,number3,sort1 )
 
 
-   /* var smallest = getsmallest(number1,number2,number3)
-    var biggest = getbiggest(number1,number2,number3)
-    var mid = getmid(number1,number2,number3)*/
 
-    sort(number1,number2,number3)
 
+    /* var smallest = getsmallest(number1,number2,number3)
+       var biggest = getbiggest(number1,number2,number3)
+       var mid = getmid(number1,number2,number3)*/
     //
 // println("$smallest $mid $biggest")
 }
+
 
 
     /* var smallest = number1

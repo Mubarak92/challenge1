@@ -25,20 +25,53 @@ fun getbiggest(number1:Double,number2:Double,number3:Double):Double {
     }
     return biggest
 }
-fun getmid(number1:Double,number2:Double,number3:Double):Double{
+fun getmidEasy(number1:Double,number2:Double,number3:Double):Double{
     var smallest=getsmallest(number1, number2, number3)
     var biggest=getbiggest(number1, number2, number3)
 
-    var mid=0.0
+    var midEasy=0.0
     if (number1 < biggest && number1 > smallest ){
-        mid= number1
+        midEasy= number1
     }
     else if(number2 < biggest && number2 > smallest) {
-        mid = number2
+        midEasy = number2
     }
     else {
-        mid = number3
+        midEasy = number3
 
     }
-    return mid
+
+    return midEasy
 }
+fun getmid(number1: Double,number2: Double,number3: Double): Double {
+
+    var smallest=getsmallest(number1, number2, number3)
+    var biggest=getbiggest(number1, number2, number3)
+
+    var mid = 0.0
+    if ((number1 < number2 && number1 > number3 || number1 > number2 && number1 < number3))
+        mid = number1
+
+    if ((number2 < number1 && number2 > number3 || number2 > number1 && number2 < number3))
+        mid = number2
+
+    if ((number3 < number1 && number3 > number2 || number3 > number1 && number3 < number2))
+        mid = number3
+
+return mid
+ /*(number1 < biggest && number1 > smallest ){
+    mid= number1
+}
+if(number2 < biggest && number2 > smallest) {
+    mid = number2
+}
+else {
+    mid = number3
+
+}*/
+}
+
+
+
+
+
